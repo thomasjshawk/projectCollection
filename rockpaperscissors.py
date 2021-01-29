@@ -9,7 +9,7 @@ def choose():
     global you
     you = input("Rock(r), paper(p), scissors(s)? ")
 
-    #check for invalid slection and loop till fixed
+    #check for invalid selection and loop till fixed
     while(you != "r" and you != "p" and you != "s"):
         print("Invalid entry! Choose 'r', 'p', or 's'!")
         you = input("Rock (r), paper (p), scissors (s)? ")

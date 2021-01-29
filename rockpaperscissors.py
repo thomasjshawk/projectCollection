@@ -36,22 +36,21 @@ def selector():
     #define global variable and randomly select
     global computer
     computer = random.randint(1, 3)
+    options = {1 : 'r', 2 : 'p', 3 : 's'}
 
+    computer = options[computer]
     #rock chosen
-    if computer == 1:
-        computer = "r"
+    if computer == 'r':
         print("Computer chose rock!")
         time.sleep(2)
 
     #paper chosen
-    elif computer == 2:
-        computer = "p"
+    elif computer == 'p':
         print("Computer chose paper!")
         time.sleep(2)
 
     #scissors chosen
     else:
-        computer = "s"
         print("Computer chose scissors!")
         time.sleep(2)  
     

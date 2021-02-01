@@ -1,7 +1,7 @@
 import calculator
 import countoff
 import rockpaperscissors
-import compoundInterestCalculator
+import compoundinterestcalculator
 
 
 def select(selection):
@@ -12,7 +12,7 @@ def select(selection):
         main()
 
     elif selection == '2':
-        compoundInterestCalculator.main()
+        compoundinterestcalculator.main()
         print()
         main()
         

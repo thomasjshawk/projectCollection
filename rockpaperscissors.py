@@ -1,6 +1,6 @@
 import random
 import time
-
+from calculator import replay
 
 #player selection process
 def choose():
@@ -50,30 +50,24 @@ def winner(you, computer):
     else:
         print("It's a tie!")
 
+def game():
+    #welcome
+    print("Welcome to rock, paper, scissors!")
+    
+    #player selection
+    choose()
+
+    #computer selection
+    selector()
+
+    #find and declare winner
+    winner(you, computer)
+
 
 #main function structure
 def main():
-
-    #welcome and establish looping variable
-    print("Welcome to rock, paper, scissors!")
-    newGame = 'Y'
+    replay(game)
     
-    #while loop to allow user to exit the calculator when finished
-    while(newGame != "N" and newGame != "n"):
-        choose()
-
-        selector()
-
-        winner(you, computer)
-
-        #asking if they want to play again, changing variable to break while loop if desired
-        newGame = input("Would you like to play again?(Y/N): ")
-        while(newGame != "Y" and newGame != "y" and newGame != "N" and newGame != "n"):
-            print("Please enter Y or N")
-            newGame = input("Would you like to play again?(Y/N): ")
-                
-    else:
-        print("Goodbye!")
 
 
 if __name__ == "__main__":

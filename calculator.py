@@ -40,19 +40,20 @@ def runOperation(operation, num1, num2):
 
 
 #asking if another calculation is wanted
-def reCalc(func):
+def replay(func):
     func()
-    newCalc = input("\nWould you like to calculate something else?(Y/N): ")
-    while(newCalc != "Y" and newCalc != "y" and newCalc != "N" and newCalc != "n"):
-        print("Please enter Y or N")
-        newCalc = input("Would you like to calculate something else?(Y/N): ")
-    
-    if newCalc == "Y" or newCalc == "y":
-        func()
-                
-    else:
-        print("Goodbye!")
-        return
+    while True:
+        newCalc = input("\nWould you like to try again?(Y/N): ")
+        while(newCalc != "Y" and newCalc != "y" and newCalc != "N" and newCalc != "n"):
+            print("Please enter Y or N")
+            newCalc = input("Would you like to try again?(Y/N): ")
+        
+        if newCalc == "Y" or newCalc == "y":
+            func()
+                    
+        else:
+            print("Goodbye!")
+            return
 
 def calc():
     #assign vairables for while loops
@@ -92,9 +93,9 @@ def calc():
 
 #main function
 def main():
-    reCalc(calc)
+    replay(calc)
    
-   
+
 
 #Import calculator to another file
 if __name__ == "__main__":

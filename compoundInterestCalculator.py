@@ -1,4 +1,4 @@
-from calculator import reCalc
+from calculator import replay
 
 def percentageCalc(initialDeposit, balance, accruedInterest):
     percentInvested = (initialDeposit / balance) * 100
@@ -26,11 +26,11 @@ def calc():
 
     print("\nYear: " + str(year) + "  " + "Interest: " + str(round(accruedInterest, 2)) + "  " + "Balance: " + str(round(balance, 2)))
     percentageCalc(initialDeposit, balance, accruedInterest)
-    print("\n\n")
+    print("\n")
 
 
 def main():
-    reCalc(calc)
+    replay(calc)
 
 
 

@@ -1,7 +1,7 @@
 from calculator import replay
 
-def percentageCalc(initialDeposit, balance, accruedInterest):
-    percentInvested = (initialDeposit / balance) * 100
+def percentageCalc(deposits, balance, accruedInterest):
+    percentInvested = (deposits / balance) * 100
     percentGained = (accruedInterest / balance) * 100
     print("\nPercent Invested: " + str(round(percentInvested, 2)) + "%  " + "Percent Gained: " + str(round(percentGained, 2)) + "%")
 
@@ -9,8 +9,8 @@ def calc():
     year = 0
     accruedInterest = 0
 
-    initialDeposit = float(input("\nHow much will you invest? "))
-    balance = initialDeposit
+    deposits = float(input("\nHow much will you invest? "))
+    balance = deposits
 
     interest = float(input("\nWhat is the interest rate? "))
     
@@ -20,18 +20,19 @@ def calc():
 
     while year < yearLimit:
         year += 1
-        accruedInterest += (balance * interest) + monthlycontributions
-        balance += balance * interest
+        balance += (monthlycontributions * 12)
+        deposits += float(monthlycontributions * 12)
+        accruedInterest += (balance * interest)
+        balance += balance * interest 
 
 
-    print("\nYear: " + str(year) + "  " + "Interest: " + str(round(accruedInterest, 2)) + "  " + "Balance: " + str(round(balance, 2)))
-    percentageCalc(initialDeposit, balance, accruedInterest)
+    print("\nYear: " + str(year) + "  " + "Deposits: " + str(round(deposits, 2)) + "  " + "Interest Gained: " + str(round(accruedInterest, 2)) + "  " + "Balance: " + str(round(balance, 2)))
+    percentageCalc(deposits, balance, accruedInterest)
     print("\n")
 
 
 def main():
     replay(calc)
-
 
 
 if __name__ == "__main__":

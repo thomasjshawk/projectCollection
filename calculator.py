@@ -87,7 +87,7 @@ def calc():
             print("Invalid Entry, please try again!\n")
     
             
-            
+    #perform calculations and print results        
     runOperation(operation, myNum1, myNum2)
 
 

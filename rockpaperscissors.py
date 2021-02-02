@@ -69,6 +69,6 @@ def main():
     replay(game)
     
 
-
+#allow to be imported to another file in folder
 if __name__ == "__main__":
     main()

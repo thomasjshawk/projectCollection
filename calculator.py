@@ -39,11 +39,24 @@ def runOperation(operation, num1, num2):
         print(divide(num1, num2))
 
 
-#main function
-def main():
+#asking if another calculation is wanted
+def replay(func):
+    func()
+    while True:
+        newCalc = input("\nWould you like to try again?(Y/N): ")
+        while(newCalc != "Y" and newCalc != "y" and newCalc != "N" and newCalc != "n"):
+            print("Please enter Y or N")
+            newCalc = input("Would you like to try again?(Y/N): ")
+        
+        if newCalc == "Y" or newCalc == "y":
+            func()
+                    
+        else:
+            print("Goodbye!")
+            return
 
+def calc():
     #assign vairables for while loops
-    newCalc = "Y"
     myNum1 = "F"
     myNum2 = "F"
     validInput = False
@@ -74,21 +87,14 @@ def main():
             print("Invalid Entry, please try again!\n")
     
             
-            
+    #perform calculations and print results        
     runOperation(operation, myNum1, myNum2)
 
-    #asking if another calculation is wanted, changing variable to break while loop
-    newCalc = input("\nWould you like to calculate something else?(Y/N): ")
-    while(newCalc != "Y" and newCalc != "y" and newCalc != "N" and newCalc != "n"):
-        print("Please enter Y or N")
-        newCalc = input("Would you like to calculate something else?(Y/N): ")
-    
-    if newCalc == "Y" or newCalc == "y":
-        main()
-                
-    else:
-        print("Goodbye!")
 
+#main function
+def main():
+    replay(calc)
+   
 
 
 #Import calculator to another file

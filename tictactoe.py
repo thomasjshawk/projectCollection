@@ -22,6 +22,10 @@ def computerselect():
     else:
         startingboard[computerchoice] = 'O'
 
+if startingboard[1] == startingboard[2] == startingboard[3] | startingboard[4] == startingboard[5] == startingboard[6] | startingboard[7] == startingboard[8] == startingboard[9] | startingboard[1] == startingboard[5] == startingboard[9] | startingboard[3] == startingboard[5] == startingboard[7] | startingboard[1] == startingboard[4] == startingboard[7] | startingboard[2] == startingboard[5] == startingboard[8] | startingboard[3] == startingboard[6] == startingboard[9]:
+
+
+
 playerselect()
 computerselect()
 printboard()

@@ -8,7 +8,20 @@ def printboard():
 
 def playerselect():
     playerchoice = int(input("What square would you like to choose? (1-9, left to right, top to bottom)"))
-    startingboard[playerchoice] = 'X'
+    if startingboard[playerchoice] != " ":
+        print("Square already taken, choose again!")
+        playerselect()
+    else:
+        startingboard[playerchoice] = "X"
+
+
+def computerselect():
+    computerchoice = random.randint(1, 9)
+    if startingboard[computerchoice] != " ":
+        computerselect()
+    else:
+        startingboard[computerchoice] = 'O'
 
 playerselect()
+computerselect()
 printboard()

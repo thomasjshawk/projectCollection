@@ -2,7 +2,7 @@ import random
 from calculator import replay
 
 
-startingboard = {1 : " ", 2 : " ", 3 : " ", 4 : " ", 5 : " ", 6 : " ", 7 : " ", 8 : " ", 9 : " ",}
+startingboard = {1 : " ", 2 : " ", 3 : " ", 4 : " ", 5 : " ", 6 : " ", 7 : " ", 8 : " ", 9 : " "}
 
 def printboard():
     global board 

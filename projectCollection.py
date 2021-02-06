@@ -11,7 +11,7 @@ def select(selection):
         print()
         main()
 
-    #route to compount interest calculator
+    #route to compound interest calculator
     elif selection == '2':
         compoundinterestcalculator.main()
         print()

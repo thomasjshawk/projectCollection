@@ -1,5 +1,6 @@
 Tic Tac Toe
-    allow user to choose X or O 
-    nestle inside repeating loop
+    allow user to choose X or O - DONE
+    nestle inside repeating loop - In progress
+        second loop doesn't properly reselect marker
     add to main project
     

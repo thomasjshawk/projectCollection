@@ -1,0 +1,5 @@
+Tic Tac Toe
+    allow user to choose X or O 
+    nestle inside repeating loop
+    add to main project
+    

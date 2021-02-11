@@ -10,9 +10,11 @@ board = 'none'
 def markerSelection():
     global marker_player
     global marker_computer
+    marker_computer = 'none'
+    marker_player = 'none'
     marker_player = input("Would you like Xs or Os?")
 
-    if marker_player == 'X' or 'X' == 'x':
+    if marker_player == 'X' or marker_player == 'x':
         marker_player = 'X'
         marker_computer = 'O'
 
@@ -75,4 +77,6 @@ def game():
 def main():
     replay(game)
 
-main()
+#allow to be imported to another file in folder
+if __name__ == "__main__":
+    main()

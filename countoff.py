@@ -4,7 +4,7 @@ from calculator import replay
 #function to count
 def counter():
     #ask for number user wants game to count to
-    n = int(input("\nHow hi do you want me to count? "))
+    n = int(input("\nHow high do you want me to count? "))
     print("Count off!")
 
     #print and count up for every number in the given range

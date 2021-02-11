@@ -1,0 +1,6 @@
+Tic Tac Toe
+    allow user to choose X or O - DONE
+    nestle inside repeating loop - DONE
+        second loop doesn't properly reselect marker - DONE
+    add to main project
+    
